@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3F51B5"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/ButtonAtras"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#00705A5A"
+        android:textColor="#070707"
+        app:icon="@drawable/flecha_izq"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="   ." />
+
+    <Button
+        android:id="@+id/ButtonAvanzar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#009A7878"
+        android:text="."
+        app:icon="@drawable/flecha_der"
+        app:layout_constraintStart_toEndOf="@+id/ButtonAtras"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/URL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/ButtonAvanzar"
+        app:layout_constraintEnd_toStartOf="@+id/Reload"
+        app:layout_constraintStart_toEndOf="@+id/ButtonAvanzar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Reload"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#008E6D6D"
+        android:text="."
+        app:icon="@drawable/reload"
+        app:layout_constraintEnd_toStartOf="@+id/Compartir"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Compartir"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#00875A5A"
+        android:text="."
+        app:icon="@drawable/compar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <WebView
+        android:id="@+id/WebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/URL" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/URL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/URL" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
